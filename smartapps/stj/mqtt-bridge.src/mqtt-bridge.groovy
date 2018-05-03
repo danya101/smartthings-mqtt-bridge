@@ -223,6 +223,27 @@ import groovy.transform.Field
         ],
         action: "actionOnOff"
     ],
+    "robotCleanerCleaningMode": [
+        name: "Robot Cleaner Cleaning Mode",
+        capability: "capability.robotCleanerCleaningMode",
+        attributes: [
+            "robotCleanerCleaningMode"
+        ]
+    ],    
+    "robotCleanerMovement": [
+        name: "Robot Cleaner Movement",
+        capability: "capability.robotCleanerMovement",
+        attributes: [
+            "robotCleanerMovement"
+        ]
+    ],    
+    "robotCleanerTurboMode": [
+        name: "Robot Cleaner Turbo Mode",
+        capability: "capability.robotCleanerTurboMode",
+        attributes: [
+            "robotCleanerTurboMode"
+        ]
+    ],    
     "shockSensor": [
         name: "Shock Sensor",
         capability: "capability.shockSensor",
