@@ -228,21 +228,24 @@ import groovy.transform.Field
         capability: "capability.robotCleanerCleaningMode",
         attributes: [
             "robotCleanerCleaningMode"
-        ]
+        ],
+        action: "actionCleaningMode"
     ],    
     "robotCleanerMovement": [
         name: "Robot Cleaner Movement",
         capability: "capability.robotCleanerMovement",
         attributes: [
             "robotCleanerMovement"
-        ]
+        ],
+        action: "actionCleanerMovement"
     ],    
     "robotCleanerTurboMode": [
         name: "Robot Cleaner Turbo Mode",
         capability: "capability.robotCleanerTurboMode",
         attributes: [
             "robotCleanerTurboMode"
-        ]
+        ],
+        action: "actionTurboMode"
     ],    
     "shockSensor": [
         name: "Shock Sensor",
@@ -742,4 +745,16 @@ def actionTimedSession(device, attribute, value) {
     if (attribute == "timeRemaining") {
         device.setTimeRemaining(value)
     }
+}
+
+def actionCleaningMode(device, attribute, value) {
+    device.setRobotCleanerCleaningMode(value)
+}
+
+def actionCleanerMovement(device, attribute, value) {
+    device.setRobotCleanerMovement(value)
+}
+
+def actionTurboMode(device, attribute, value) {
+    device.setRobotCleanerTurboMode(value)
 }
