@@ -120,6 +120,14 @@ import groovy.transform.Field
             "energy"
         ]
     ],
+    "execute": [
+        name: "Execute",
+        capability: "capability.execute",
+        attributes: [
+            "data"
+        ],
+        action: "actionExecute"
+    ],
     "garageDoors": [
         name: "Garage Door Control",
         capability: "capability.garageDoorControl",
@@ -214,6 +222,13 @@ import groovy.transform.Field
         attributes: [
             "humidity"
         ]
+    ],
+    "refresh": [
+        name: "Refresh",
+        capability: "capability.refresh",
+        attributes: [
+        ],
+        action: "actionRefresh"
     ],
     "relaySwitch": [
         name: "Relay Switch",
@@ -757,4 +772,12 @@ def actionCleanerMovement(device, attribute, value) {
 
 def actionTurboMode(device, attribute, value) {
     device.setRobotCleanerTurboMode(value)
+}
+
+def actionExecute(device, attribute, value) {
+    device.execute(value)
+}
+
+def actionRefresh(device, attribute, value) {
+    device.refresh()
 }
